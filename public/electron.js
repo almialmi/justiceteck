@@ -8,8 +8,10 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    autoHideMenuBar: isDev ? false : true,
     webPreferences: {
       nodeIntegration: true,
+      webviewTag: true,
     },
   });
 
